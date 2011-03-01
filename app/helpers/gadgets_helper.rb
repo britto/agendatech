@@ -7,10 +7,10 @@ module GadgetsHelper
       if current_user.vai_no? evento
         content << link_to('Confirmado!', root_path, :class => 'ajax_vou_confirmado')
       else
-        content << link_to( 'Eu vou!', gadgets_path(:evento => evento.id, :tipo => Gadget.tipos[:eu_vou]), :class => 'ajax_vou', :id => "ajax_vou_#{evento.id}", :remote => true     )   
-      end  
+        content << link_to( 'Eu vou!', gadgets_path(:evento => evento.id, :tipo => Gadget.tipos[:eu_vou]), :class => 'ajax_vou', :id => "ajax_vou_#{evento.id}", :remote => true     )
+      end
     else
-      content << link_to( 'Eu vou!', gadgets_path(:evento => evento.id, :tipo => Gadget.tipos[:eu_vou]), :class => 'ajax_vou', :id => "ajax_vou_#{evento.id}"    )   
+      content << link_to( 'Eu vou!', gadgets_path(:evento => evento.id, :tipo => Gadget.tipos[:eu_vou]), :class => 'ajax_vou', :id => "ajax_vou_#{evento.id}"    )
     end
 
     content << "</div>"
@@ -27,6 +27,6 @@ module GadgetsHelper
   end
 
   def image_extension image
-    image.match(/(\w{3,4})$/).to_s    
+    image.match(/(\w{3,4})$/).to_s
   end
 end

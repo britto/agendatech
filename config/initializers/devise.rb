@@ -3,8 +3,8 @@
 Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me@config-initializers-devise.com"
-  
-  require 'devise/orm/active_record'  
+
+  require 'devise/orm/active_record'
   # Configure the content type of DeviseMailer mails (defaults to text/html")
   # config.mailer_content_type = "text/plain"
 

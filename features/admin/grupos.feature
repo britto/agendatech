@@ -7,7 +7,7 @@ Contexto:
     |gurusp|false | www.guru-sp.com |
   E que estou como administrador
   E que estou na pagina "administracao de grupos"
-  
+
 
 Cenario: Aprovar grupo
 	Quando clico no link "Aprovar"

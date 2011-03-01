@@ -40,7 +40,7 @@ module Agendatech
     config.filter_parameters += [:password, :password_confirmation]
 
     config.action_mailer.delivery_method = :smtp
-    
+
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
@@ -48,7 +48,7 @@ module Agendatech
       :user_name            => ENV['GMAIL_SMTP_USER'],
       :password             => ENV['GMAIL_SMTP_PASSWORD'],
       :authentication       => 'plain',
-    }   
-  end   
+    }
+  end
 end
 

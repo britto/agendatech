@@ -16,7 +16,7 @@ development:
   host: localhost
   database: agendatech_development
   username: root
-  password: 
+  password:
 
 # Warning: The database defined as 'test' will be erased and
 # re-generated from your development database when you run 'rake'.
@@ -26,8 +26,8 @@ test:
   host: localhost
   database: agendatech_test
   username: root
-  password: 
-    
+  password:
+
 production:
     adapter: mysql2
     host: localhost
@@ -40,5 +40,5 @@ cucumber:
     host: localhost
     database: agendatech_test
     username: root
-    password: 
+    password:
 

@@ -2,7 +2,7 @@ class Grupo < ActiveRecord::Base
   has_many :eventos
 
   acts_as_taggable
-  Plugins.paper_clip self  
+  Plugins.paper_clip self
 
 
   validates_presence_of :nome

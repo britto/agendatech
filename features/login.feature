@@ -42,7 +42,7 @@ Funcionalidade: Controlar o acesso de administradores no site
         Quando preencho o campo "Email" com "admin@admin.com"
         E preencho o campo "Password" com "adminspassword"
         E clico no botao "Sign in"
-        Entao deveria ver a aba "Aprovação Eventos" 
-        E deveria ver a aba "Aprovação Grupos" 
+        Entao deveria ver a aba "Aprovação Eventos"
+        E deveria ver a aba "Aprovação Grupos"
         E deveria ver a aba "Logout"
 

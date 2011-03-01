@@ -4,15 +4,15 @@ Agendatech::Application.routes.draw do
   devise_for :users
 
   devise_for :admins
-  namespace :admin do 
+  namespace :admin do
     root :to => 'admin#index'
     resources :eventos, :only => [:index,:update] do
       member do
         get 'aprovar'
-        get 'remover' 
+        get 'remover'
       end
     end
-    resources :grupos, :only => [:index,:update,:destroy] do 
+    resources :grupos, :only => [:index,:update,:destroy] do
       member do
         put 'aprovar'
       end

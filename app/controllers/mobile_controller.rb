@@ -3,7 +3,7 @@ class MobileController < ApplicationController
     @eventos = Evento.que_ainda_vao_rolar
     render :json => @eventos
   end
-  
+
   def novo_evento
     nome =  params[:nome]
     descricao = params[:descricao]

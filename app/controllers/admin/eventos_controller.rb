@@ -5,11 +5,11 @@ class Admin::EventosController < ApplicationController
     @eventos = Evento.all(:conditions=>{:aprovado=>false})
     @eventos_editar = Evento.all
   end
-  
+
   def editar
     @evento = Evento.find_by_cached_slug(params[:id])
   end
-  
+
   def update
      @evento = Evento.find_by_cached_slug(params[:id])
       if @evento.update_attributes(params[:evento])

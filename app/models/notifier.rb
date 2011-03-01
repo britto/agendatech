@@ -8,7 +8,7 @@ class Notifier < ActionMailer::Base
     mail( :subject => "Contato agendatech",
           :to => ["andersonlfl@gmail.com", "alots.ssa@gmail.com"].join(",")
     )
-    
+
   end
 
 end

@@ -17,11 +17,11 @@ class Admin::GruposController < ApplicationController
     flash[:notice] = "Grupo reprovado."
     redirect_to admin_grupos_path
   end
-  
+
   def editar
     @grupo = Grupo.find(params[:id])
   end
-  
+
   def update
      @grupo = Grupo.find(params[:id])
       if @grupo.update_attributes(params[:grupo])
@@ -31,6 +31,6 @@ class Admin::GruposController < ApplicationController
         render :action => 'edit'
       end
   end
-  
+
 
 end

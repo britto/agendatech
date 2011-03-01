@@ -6,7 +6,7 @@ describe GadgetsHelper do
     gadget = Gadget.new :user_id => 1
     user = User.new :image => "anderson_leite.jpg"
     User.should_receive(:find).with(1).and_return(user)
-    
+
     helper.extension(gadget).should be == "jpg"
   end
 
@@ -14,10 +14,10 @@ describe GadgetsHelper do
     gadget = Gadget.new :user_id => 1
     user = User.new :image => "anderson_leite.jpeg"
     User.should_receive(:find).with(1).and_return(user)
-    
+
     helper.extension(gadget).should be == "jpeg"
   end
-    
+
 
 end
 

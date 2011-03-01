@@ -6,15 +6,15 @@
       <small><%= l(Date.today, :format => :month) %></small>
     <%else%>
       <p><%= evento.data.day %></p>
-      <small><%= l(evento.data, :format => :month) %></small>			
+      <small><%= l(evento.data, :format => :month) %></small>
     <%end%>
   </div><!-- fim class="data" -->
 
   <% if evento.logo? %>
     <div class="logo_img clearfix">
-    <%= image_tag evento.logo.url(:thumb) %> 
+    <%= image_tag evento.logo.url(:thumb) %>
     </div>
-  <% else %>  
+  <% else %>
   <div class="logo clearfix">  </div>
 <% end %>
 
@@ -36,14 +36,14 @@
         <div class="spinner">
           <%= image_tag 'ajax-loader.gif' %>
         </div>
-        <%= render :partial => 'eu_vou_gadget', :locals => { :pessoas_que_vao =>  evento.me_da_gadgets.eu_vou} %>          
+        <%= render :partial => 'eu_vou_gadget', :locals => { :pessoas_que_vao =>  evento.me_da_gadgets.eu_vou} %>
       </div>
     </div>
     <%= eu_vou evento %>
     <%= render 'shared/tweet_button', :text => "#{evento.nome} #agendatech", :url => evento_full_url(evento), :twitter => evento.twitter %>  </div>
-  
+
   <div class="comments">
-    <%= link_to "#{evento.comentarios.size} comentarios", evento_full_path(evento) %> 
+    <%= link_to "#{evento.comentarios.size} comentarios", evento_full_path(evento) %>
   </div>
 
   <!-- ideia: badges! melhorar-->

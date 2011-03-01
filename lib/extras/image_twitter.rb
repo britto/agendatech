@@ -12,23 +12,23 @@ module ImageTwitterHelper
 end
 
 class ImageTwitter
-  include ImageTwitterHelper  
+  include ImageTwitterHelper
   def download user_name
       nome,url_da_imagem = arquivo_para user_name
       file_path =  "#{Rails.root}/public/images/twimages/#{nome}"
       unless File.exists?(file_path)
           File.open(file_path, 'w') do |output|
             open(url_da_imagem) do |input|
-                output <<  input.read            
+                output <<  input.read
             end
           end
       end
-   end           
+   end
 end
 
 class ImageTwitterInS3
-  include ImageTwitterHelper    
-  
+  include ImageTwitterHelper
+
   def download user_name
     bucket = 'twitter_images'
     nome,url_da_imagem = arquivo_para user_name
