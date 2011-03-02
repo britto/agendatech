@@ -13,11 +13,9 @@ gem 'omniauth',             '~> 0.1.6'
 gem 'aws-s3',               '~> 0.6.2'
 gem 'dalli',                '~> 1.0.2'
 
-group :development, :test do
-  gem 'rspec'
+group :test do
   gem 'rspec-rails',        '~> 2.5.0'
-  gem 'remarkable',         '~> 3.1.13', :require => false
-  gem 'remarkable_rails',   '~> 3.1.13', :require => false
+  gem 'shoulda-matchers',   '>= 1.0.0.beta1'
 end
 
 group :cucumber do
