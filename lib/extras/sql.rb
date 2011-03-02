@@ -1,25 +1,16 @@
 #manguezinho para pegar funcao do mysql ou do postgree, enquanto nao rola uma decisao sobre trocar ou nao.
 class SQL
   def self.mes_do_evento
-    EnvironmentHack.para do |env| 
-      env.producao {
-        return "date_part('month',data)"
-      }
-      env.outros {   
-        return "month(data)"      
-      }
-    end
+    postgre? ? "date_part('month', data)" : "month(data)"
   end
-  
+
   def self.ano_do_evento
-    EnvironmentHack.para do |env| 
-      env.producao {
-        return "date_part('year',data)"
-      }
-      env.outros {   
-        return "year(data)"      
-      }
-    end    
+    postgre? ? "date_part('year', data)" : "year(data)"
+  end
+
+  protected
+  def self.postgre?
+    ActiveRecord::Base.connection.adapter_name == "PostgreSQL"
   end
 
 end
