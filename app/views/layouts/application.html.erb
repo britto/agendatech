@@ -24,8 +24,8 @@
 
         <% if user_signed_in? %>
           <div id="user_logged">
-            Usuário: 
-            <%= current_user.nickname %>, 
+            Usuário:
+            <%= current_user.nickname %>,
             <%= link_to "Sair", destroy_user_session_path, :class => 'blue' %>
           </div>
           <div style="clear:right"></div>
@@ -62,25 +62,20 @@
         <% end  %>
         <div id="left" >
         <!--p class="breadcrumb"><% if @mes %>Eventos em <%= @mes %><% end %></p>
-        <p class="breadcrumb"><% if @tag %>Eventos de <%= @tag	%><% end %></p-->
+        <p class="breadcrumb"><% if @tag %>Eventos de <%= @tag  %><% end %></p-->
 
           <%= yield %>
 
         </div>
         <div id="right" >
 
-
-          <FORM>
-            <INPUT TYPE="BUTTON" VALUE="Cadastrar novo evento" class="botao" style="width: 230px;"
-            ONCLICK="window.location.href='<%= new_evento_path %>'">
-          </FORM>
-          <br/> 
-          <FORM>
-            <INPUT TYPE="BUTTON" VALUE="Cadastrar novo grupo" class="botao" style="width: 230px;"
-            ONCLICK="window.location.href='<%= new_grupo_path %>'">
-          </FORM>
-
-
+          <%= form_tag new_evento_path, :method => :get do %>
+            <input type="submit" value="Cadastrar novo evento" class="botao" style="width: 230px;">
+          <% end %>
+          <br/>
+          <%= form_tag new_grupo_path, :method => :get do %>
+            <input type="submit" value="Cadastrar novo grupo" class="botao" style="width: 230px;">
+          <% end %>
           <br/>
 
           <div id="about">
@@ -143,7 +138,7 @@
 
           <div id="mes">
             <div class="header">
-              <p>Últimos comentários</p>              
+              <p>Últimos comentários</p>
             </div>
             <div class="inner">
 
@@ -166,7 +161,7 @@
             <%= image_tag "android.png" %>
           </div>
           <br/>
-          
+
           <br/>
           <div id="twitter">
             <div class="header">
@@ -207,8 +202,8 @@
           <br/><br/>
            <div id="facebook">
               <%=facebook_like_button%>
-          </div>          
-  
+          </div>
+
 
 
         </div>
@@ -232,7 +227,7 @@
       </a>
 
       <p><%= link_to "Home", :controller => 'eventos' %> |
-      <%= link_to "Rails", :controller => 'eventos/tag/rails' %>	|
+      <%= link_to "Rails", :controller => 'eventos/tag/rails' %>  |
       <%= link_to "Java", :controller => 'eventos/tag/java' %> |
       <%= link_to "Arquitetura", :controller => 'eventos/tag/arquitetura' %> |
       <%= link_to "Ruby", :controller => 'eventos/tag/ruby' %> |

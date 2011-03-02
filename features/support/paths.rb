@@ -21,7 +21,7 @@ module NavigationHelpers
       '/admin'
 
     when /cadastrar grupo/
-      '/grupos/novo'
+      '/grupos/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

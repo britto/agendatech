@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Grupo do
 
   describe "uniqueness of name" do
-    before(:each) { Grupo.create(:nome => 'GURU-SP', :site => 'http://guru-sp.com/') }
+    before { Grupo.create(:nome => 'GURU-SP', :site => 'http://guru-sp.com/') }
     it { should validate_uniqueness_of :nome }
   end
 
